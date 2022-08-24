@@ -460,7 +460,7 @@ const stock = new Stock("IBM");
 
 
 const yunsoo = {
-    name:"yunsoo",
+    name:"yunso",
 };
 const jinsoo = {
     name:"jinsoo",
