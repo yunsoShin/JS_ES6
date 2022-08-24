@@ -463,7 +463,7 @@ const yunsoo = {
     name:"yunso",
 };
 const jinsoo = {
-    name:"jinsoo",
+    name:"jinso",
 };
 function showThisName(){
     console.log(this.name) //여기서 this는 window를 가르킨다.
