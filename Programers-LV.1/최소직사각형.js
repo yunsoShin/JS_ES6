@@ -12,3 +12,11 @@ function solution(sizes) {
     
     return Math.max(...max)*Math.max(...min)
 }
+
+
+function solution(sizes) {
+    const widths = sizes.map(size => Math.max(...size));
+    const heights = sizes.map(size => Math.min(...size));
+    
+    return Math.max(...widths) * Math.max(...heights);
+  }
