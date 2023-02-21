@@ -19,4 +19,4 @@ function solution(sizes) {
     const heights = sizes.map(size => Math.min(...size));
     
     return Math.max(...widths) * Math.max(...heights);
-  }
+  }refactoring
