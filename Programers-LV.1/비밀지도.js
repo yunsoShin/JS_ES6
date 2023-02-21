@@ -60,3 +60,15 @@ function solution(n, arr1, arr2) {
   
     return final;
   }
+
+
+  let str = [["ICN", "SFO"], ["ICN", "ATL"], ["SFO", "ATL"], ["ATL", "ICN"], ["ATL","SFO"]];
+let strSort = str.sort((a, b) => {
+    if (a[0] === b[0]) {
+        return a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : 0; 
+    } else {
+        return -1;
+    };
+});
+console.log(str);
+console.log(strSort);
