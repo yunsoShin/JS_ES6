@@ -72,3 +72,11 @@ let strSort = str.sort((a, b) => {
 });
 console.log(str);
 console.log(strSort);
+
+
+
+const myMap = new Map();
+
+// myMap에 값을 set하는 부분 생략
+
+const arrayFromMap = [...myMap].sort((a, b) => a[1] - b[1]);
