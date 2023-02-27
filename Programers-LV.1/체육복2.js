@@ -25,8 +25,8 @@ function solution(n, lost, reserve) {
         }
     }
     
-    console.log(newLost)
+    
     const numlost = newLost.filter((a)=>!isNaN(parseInt(a)))
-    console.log(numlost)
+    
     return arr.length - numlost.length;
 }
