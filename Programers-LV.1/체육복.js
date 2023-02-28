@@ -19,7 +19,9 @@ function solution(n, lost, reserve) {
         }
     }
     
-    
+    console.log(arr.length);
 
     return arr.length - lost.length + answer;
 }
+
+solution(5,1,1)
