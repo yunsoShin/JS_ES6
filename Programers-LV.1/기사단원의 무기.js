@@ -1,32 +1,19 @@
-function getDivisorCount(num) {
-    // 에라토스테네스의 체 알고리즘으로 소수 배열을 구합니다.
-    const primes = [];
-    const isPrime = new Array(num + 1).fill(true);
-    isPrime[0] = isPrime[1] = false;
-  
-    for (let i = 2; i <= num; i++) {
-      if (isPrime[i]) {
-        primes.push(i);
-        for (let j = i * i; j <= num; j += i) {
-          isPrime[j] = false;
-        }
+function getDivisorCount(n) {
+    let divisorCount = 1;
+    let currentDivisor = 2;
+    
+    while (currentDivisor * currentDivisor <= n) {
+      let count = 0;
+      while (n % currentDivisor === 0) {
+        count++;
+        n /= currentDivisor;
       }
+      divisorCount *= (count + 1);
+      currentDivisor++;
     }
   
-    // 소인수분해하여 약수 개수를 구합니다.
-    let divisorCount = 1;
-    for (const prime of primes) {
-      if (num === 1) {
-        break;
-      }
-  
-      let count = 0;
-      while (num % prime === 0) {
-        num /= prime;
-        count++;
-      }
-  
-      divisorCount *= count + 1;
+    if (n > 1) {
+      divisorCount *= 2;
     }
   
     return divisorCount;
@@ -37,10 +24,17 @@ function getDivisorCount(num) {
   
   
   
-  
-  
   function solution(number, limit, power) {
-      getDivisorCount(number)
+      const num = []
+      for(let i = 1 ; i<=number; i++){
+          num[i-1] = getDivisorCount(i)
+          if(num[i-1]>limit){
+              num[i-1]=power
+          }
+           
+          
+      }
+      console.log(num)
       var answer = 0;
-      return answer;
+      return num.reduce((a,b)=>a+b);
   }
