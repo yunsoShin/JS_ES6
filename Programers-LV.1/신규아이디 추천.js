@@ -1,18 +1,24 @@
 function solution(new_id) {
-    var answer = '';
     const one = new_id.toLowerCase();
-    console.log(one)
-    const two = one.replace(/[^\w-._]/g,'')
-    console.log(two)
-    const twoArr = Array.from(two)
-    for(let i= 0; i<twoArr.length; i++){
-        if(twoArr[i]==='.'&&twoArr[i]===twoArr[i+1]){
-            twoArr.splice(i,1)
-            i--
-            
-        }
-        
-            
+    const two = one.replace(/[^\w-_.]/g, '');
+    const arr = Array.from(two);
+    
+    for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === '.' && arr[i] === arr[i + 1]) {
+    arr.splice(i, 1);
+    i--;
     }
-    return twoArr.join('');
-}
+    }
+    if (arr[0] === '.') arr.shift();
+    if (arr[arr.length - 1] === '.') arr.pop();
+    if (!arr.length) arr.push('a');
+    
+    const fiveArr = arr.slice(0, 15);
+    if (fiveArr[fiveArr.length - 1] === '.') fiveArr.pop();
+    while (fiveArr.length <= 2) fiveArr.push(fiveArr[fiveArr.length - 1]);
+    
+    return fiveArr.join('');
+    }
+    
+    
+    
