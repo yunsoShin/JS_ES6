@@ -33,7 +33,7 @@ function solution(N, stages) {
     return indexArr.map(a=>a+1);
 }
 
-function solution(dartResult) {
+ function solution(dartResult) {
     var score = 0;
     var answer = [];
     var temp = 0; // 숫자 담을 변수
