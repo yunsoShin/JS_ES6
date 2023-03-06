@@ -1,4 +1,4 @@
-function solution(s) {
+/*function solution(s) {
     
     let 반복회수 = 1;
     let 영을제거한개수 = 0;
@@ -21,3 +21,16 @@ function solution(s) {
     answer.push(영을제거한개수)
     return answer ;
 }
+
+
+*/
+
+function solution(s) {
+    let zeroCount = 0;
+    let i;
+    for (i = 0; s !== '1'; i++) {
+      zeroCount += (s.match(/0/g) || []).length;
+      s = (s.match(/1/g) || []).length.toString(2);
+    }
+    return  [i,zeroCount];
+  }
