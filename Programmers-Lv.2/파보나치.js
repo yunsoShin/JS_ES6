@@ -41,3 +41,25 @@ function solution(n) {
     
     return answer ;
 }
+
+function solution(n) {
+    let answer = 0;
+    
+   function fibonacci(n) {
+        const mod = 1234567;
+        let a = 0;
+        let b = 1;
+        let c;
+  
+        for (let i = 2; i <= n; i++) {
+            c = (a + b) % mod;
+            a = b;
+            b = c;
+        }
+  
+        return b % mod;
+    }
+
+    answer = fibonacci(n);
+    return answer ;
+}
