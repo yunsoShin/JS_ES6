@@ -35,7 +35,7 @@ function solution(today, terms, privacies) {
         result[value] = key;
     }
     const onlynumPrivacies =privacies.map((element) => element.replace(/\D/g, ""));
-    const onlynumTod ay = today.replace(/\D/g, "");
+    const onlynumToday = today.replace(/\D/g, "");
     const onlyAlphabetPrivacies = privacies.map(str => str.match(/[A-Z]/)[0]);
     
     const term = terms.map(a=>a.replace(/\s+/g, ''))
