@@ -13,3 +13,14 @@ citations return
 [3, 0, 6, 1, 5]	3
 입출력 예 설명
 이 과학자가 발표한 논문의 수는 5편이고, 그중 3편의 논문은 3회 이상 인용되었습니다. 그리고 나머지 2편의 논문은 3회 이하 인용되었기 때문에 이 과학자의 H-Index는 3입니다.*/
+
+function solution(citations) {
+    var answer = [];
+    for(let i=0; i<citations.length; i++){
+        const arr = citations.filter(a=>a>=citations[i])
+        arr.sort((a,b)=>b-a)
+        answer.push(Math.min(arr.length,arr[arr.length-1]))        
+    }
+    answer = answer.sort((a,b)=>a-b).pop();
+    return answer;
+}
