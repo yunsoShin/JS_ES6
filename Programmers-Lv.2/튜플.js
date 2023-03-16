@@ -2,14 +2,12 @@ function solution(s) {
     var answer = [];
     s= s.replaceAll("{","[")
         .replaceAll("}","]")
-    console.log(typeof(s))
     const arr = eval(s);
-    console.log(typeof(arr))
-    
-    
-    return arr;
+    arr.sort((a, b) => a.length - b.length);
+    const flattened = arr.reduce((acc, val) => acc.concat(val), []);
+    const unique = Array.from(new Set(flattened));
+    return unique;
 }
-
 /*function findLengthOne(arr) {
   const result = arr.flatMap(x => x).filter(x => x.length === 1);
   return result.length > 0 ? parseInt(result[0]) : null;
