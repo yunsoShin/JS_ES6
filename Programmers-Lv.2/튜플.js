@@ -6,7 +6,7 @@ function solution(s) {
     arr.sort((a, b) => a.length - b.length);
     const flattened = arr.reduce((acc, val) => acc.concat(val), []);
     const unique = Array.from(new Set(flattened));
-    return unique
+    return unique;
 }
 /*function findLengthOne(arr) {
   const result = arr.flatMap(x => x).filter(x => x.length === 1);
