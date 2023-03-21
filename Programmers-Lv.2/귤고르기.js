@@ -14,4 +14,4 @@ function solution(k, tangerine) {
         count++
     }
     return count;
-} 
+}  
