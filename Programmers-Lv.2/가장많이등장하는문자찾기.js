@@ -20,4 +20,4 @@ function findMostFrequentWord(text) {
   const inputText = 'the quick brown fox jumps over the lazy dog and the quick brown dog jumps again';
   const frequentWord = findMostFrequentWord(inputText);
   console.log(frequentWord); // 출력: 'the'
-  
+    
