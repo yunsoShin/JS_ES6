@@ -113,7 +113,7 @@ public class Main {
         init(n);
 
         int cnt = 0;
-        while (m-->0) { 
+        while (m-->0) {
             st = new StringTokenizer(br.readLine());
             int u = Integer.parseInt(st.nextToken());
             int v = Integer.parseInt(st.nextToken());
