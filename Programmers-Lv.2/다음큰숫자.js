@@ -6,3 +6,4 @@ function solution(n) {
     if (엔의일의개수 === answer.toString(2).split("1").length) return answer;
   }
 }
+//ㄹㅎㄹ
