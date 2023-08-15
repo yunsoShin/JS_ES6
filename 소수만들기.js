@@ -23,5 +23,5 @@ function solution(nums) {
       }
     }
   }
-  return count;
+  return count; //ㄴㄴㅇㄴ
 }
