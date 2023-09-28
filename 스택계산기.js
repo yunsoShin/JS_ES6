@@ -6,7 +6,7 @@ function calculate(expression) {
     for (let i = 0; i < postfix.length; i++) {
       const token = postfix[i];
   
-      if (/\d+/.test(token)) { // 피연산자일 경우
+      if (/\d+/.test(token)) { // 피연산자일 경우.
         stack.push(Number(token));
       } else { // 연산자일 경우
         const operand2 = stack.pop();
