@@ -10,7 +10,7 @@ function solution(nums) {
         return count;
       }
     }
-    //sssgg
+    //sssggff
     return count++;
   }
   let answer = 0;
