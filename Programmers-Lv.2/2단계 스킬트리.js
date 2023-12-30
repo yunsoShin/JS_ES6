@@ -12,5 +12,5 @@ function solution(skill, skill_trees) {
         // startWith로 걸러내기
         if (skill.startsWith(temp.join(""))) answer += 1;
     }
-    return answer;
+    return answer
 }
