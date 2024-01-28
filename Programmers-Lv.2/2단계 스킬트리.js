@@ -1,7 +1,7 @@
 function solution(skill, skill_trees) {
 
     let answer = 0;
-    //..
+    //....
     const skillList = skill.split("");
 
     for (let skills of skill_trees) {
