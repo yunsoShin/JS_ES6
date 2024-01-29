@@ -7,7 +7,7 @@ function solution(plans) {
         return {name,start:time,playtime:N_playTime}
     })
 
-    // 시작 시간순 정렬
+    
     newPlans.sort((a,b)=>a.start - b.start)
 
     let idx = 0
