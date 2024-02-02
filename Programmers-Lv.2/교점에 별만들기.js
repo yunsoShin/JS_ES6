@@ -19,7 +19,7 @@ function solution(line) {
       minH = Math.min(y, minH);
     }
   });
-  // 테이블 초기화
+  // 테이블 초기화.
   const table = new Array(maxH - minH + 1)
     .fill(null)
     .map(() => new Array(maxW - minW + 1).fill(null).map(() => "."));
