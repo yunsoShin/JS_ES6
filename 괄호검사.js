@@ -12,5 +12,5 @@ function isValidParentheses(s) {
     }
   }
 
-  return stack.length === 0; // 스택이 비어있는지 확인합니다.
+  return stack.length === 0; 
 }
