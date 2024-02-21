@@ -72,7 +72,7 @@ function solution(commands) {
       const el = table[r-1][c-1]
       //link[r][c]의 모든 원소들을 제거
        const isVisited = makeArray(0)  
-       //link[r][c]의 모든 애들을 다 제거
+       //link[r][c]의 모든 애들을 제거
        const queue = [...link[r-1][c-1]]
         link[r-1][c-1] = []
         isVisited[r-1][c-1] = 1
